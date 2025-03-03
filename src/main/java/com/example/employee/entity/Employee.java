@@ -5,12 +5,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @Table(name="employee")
-public class EmployeeEntity {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
